@@ -10,8 +10,17 @@
     position: absolute;
     height: 100px;
     width: 5%;
-    margin-left: 50%;
+    margin-left: 48%;
     background-color: ghostwhite;
+}
+#line1 {
+    weight: 100px;
+    top: 300px;
+    bottom: 100px;
+    left: 140px;
+    right: 137px;
+    position: absolute;
+    background-color: white;
 }
 .car {
     position: absolute;
