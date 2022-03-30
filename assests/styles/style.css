@@ -4,5 +4,12 @@
     width: 20vw;
     left: 40%;
     margin-top: 40px;
-    background-color: #fa7070;
+    background-color: #000000;
+}
+.line {
+    position: absolute;
+    height: 100px;
+    width: 5%;
+    margin-left: 50%;
+    background-color: ghostwhite;
 }
