@@ -1,0 +1,8 @@
+#container{
+    position: relative;
+    height: 80vh;
+    width: 20vw;
+    left: 40%;
+    margin-top: 40px;
+    background-color: #fa7070;
+}
