@@ -4,7 +4,7 @@
     width: 20vw;
     left: 40%;
     margin-top: 40px;
-    background-color: #000000;
+    background-color: #7f5858;
 }
 .line {
     position: absolute;
@@ -18,10 +18,98 @@
     height: 60px;
     width: 40px;
     border-radius: 5px;
-    box-shadow: 0px 0px 2px 2px #ff0000;
+    box-shadow: 0px 0px 1px 1px #ff0000;
 }
 #car {
     bottom: 5%;
     left: 45%;
     background-color: #39e150;
+}
+.f_glass{
+    position: absolute;
+    height: 20%;
+    width: 60%;
+    margin-left: 20%;
+    top: 15%;
+    border-radius: 0px 0px 5px 5px;
+    background-color: #484848;
+}
+.f_light_l{
+    position: absolute;
+    height: 10%;
+    width: 20%;
+    margin-left: 10%;
+    top: -6%;
+    border-radius: 5px 5px 0px 0px;
+    background-color: #efefef;
+}
+.f_light_r{
+    position: absolute;
+    height: 10%;
+    width: 20%;
+    margin-left: 70%;
+    top: -6%;
+    border-radius: 5px 5px 0px 0px;
+    background-color: #efefef;
+}
+.f_tyre_l{
+    position: absolute;
+    height: 20%;
+    width: 10%;
+    background-color: #242121;
+    top: 20%;
+    left: -10%;
+    border-radius: 5px 0px 0px 5px;
+}
+.f_tyre_r{
+    position: absolute;
+    height: 20%;
+    width: 10%;
+    background-color: #242121;
+    top: 20%;
+    left: 100%;
+    border-radius: 0px 5px 5px 0px;
+}
+.b_tyre_l{
+    position: absolute;
+    height: 20%;
+    width: 10%;
+    background-color: #242121;
+    top: 70%;
+    left: -10%;
+    border-radius: 5px 0px 0px 5px;
+}
+.b_tyre_r{
+    position: absolute;
+    height: 20%;
+    width: 10%;
+    background-color: #242121;
+    top: 70%;
+    left: 100%;
+    border-radius: 0px 5px 5px 0px;
+}
+#car1 {
+    top: 100px;
+    left: 77%;
+    background-color: #d17e27;
+}
+#car2 {
+    top: 120px;
+    left: 45%;
+    background-color: #7f6ed6;
+}
+#car3 {
+    top: 100px;
+    left: 10%;
+    background-color: #e377c0;
+}
+#car4 {
+    top: 236px;
+    left: 60%;
+    background-color: #386d86;
+}
+#car5 {
+    top: 236px;
+    left: 27%;
+    background-color: #27cad1;
 }
