@@ -1,24 +1,31 @@
-#container{
+#container {
     position: relative;
-    height: 80vh;
-    width: 20vw;
+    height: 90vh;
+    width: 22vw;
     left: 40%;
     margin-top: 40px;
-    background-color: #7f5858;
+    background-color: #2a7147;
+}
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: darkgrey;
+    font-family: sans-serif;
 }
 .line {
     position: absolute;
-    height: 100px;
-    width: 5%;
-    margin-left: 48%;
+    height: 98px;
+    width: 3%;
+    margin-left: 50%;
     background-color: ghostwhite;
 }
 #line1 {
     weight: 100px;
-    top: 300px;
-    bottom: 100px;
-    left: 140px;
-    right: 137px;
+    top: 470px;
+    bottom: 10px;
+    left: 160px;
+    right: 154px;
     position: absolute;
     background-color: white;
 }
@@ -103,8 +110,8 @@
     background-color: #d17e27;
 }
 #car2 {
-    top: 120px;
-    left: 45%;
+    top: 176px;
+    left: 56%;
     background-color: #7f6ed6;
 }
 #car3 {
@@ -114,11 +121,40 @@
 }
 #car4 {
     top: 236px;
-    left: 60%;
+    left: 79%;
     background-color: #386d86;
 }
 #car5 {
     top: 236px;
-    left: 27%;
+    left: 10%;
     background-color: #27cad1;
+}
+#score_div {
+    position: absolute;
+    margin-top: -31%;
+    margin-left: 62%;
+    font-size: 35px;
+    background-color: #000000;
+    color: #ef0101;
+    padding: 10px;
+    box-shadow: 4px 4px 0px 1px #e99d9d;
+}
+#restart {
+    border: none;
+    padding: 25px;
+    color: white;
+    background-color: #8a64ff;
+    font-size: 30px;
+    margin-top: 30%;
+}
+#restart_div {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #eac7c7;
+    color: white;
+    font-family: sans-serif;
+    font-size: 40px;
+    text-align: center;
+    display: none;
 }
