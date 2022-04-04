@@ -18,14 +18,13 @@ body {
     height: 98px;
     width: 3%;
     margin-left: 50%;
-    background-color: ghostwhite;
+    background-color: white;
 }
 #line1 {
-    weight: 100px;
-    top: 470px;
-    bottom: 10px;
-    left: 160px;
-    right: 154px;
+    top: 74%;
+    height: 160px;
+    width: 3%;
+    margin-left: 50%;
     position: absolute;
     background-color: white;
 }

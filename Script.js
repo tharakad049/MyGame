@@ -2,16 +2,45 @@ $(function () {
     var container = $('#container');
     var car = $('#car');
 
-    var car_1 = $('#car_1');
-    var car_2 = $('#car_2');
-    var car_3 = $('#car_3');
-    var car_4 = $('#car_4');
-    var car_5 = $('#car_5');
+    var car1 = $('#car1');
+    var car2 = $('#car2');
+    var car3 = $('#car3');
+    var car4 = $('#car4');
+    var car5 = $('#car5');
 
-    var line_1 = $('#line_1');
-    var line_2 = $('#line_2');
-    var line_3 = $('#line_3');
-    var line_4 = $('#line_4');
-    var line_5 = $('#line_5');
+    var line1 = $('#line1');
+    var line2 = $('#line2');
+    var line3 = $('#line3');
+
+    var game_over = false;
+    var move_left = false;
+
+    $(document).on('keydown', function (e) {
+        if (game_over === false){
+            var key = e.keyCode;
+            if(key === 37 && move_left === false){
+                move_left == requestAnimationFrame(left);
+            }
+        }
+    });
+
+    $(document).on('keyup', function (e) {
+        if (game_over === false){
+            var key = e.keyCode;
+            if (key === 37){
+                cancelAnimationFrame(move_left);
+                move_left = false;
+            }
+        }
+
+    });
+    function left() {
+        if (game_over === false){
+            car.css('left', -5);
+            move_left = requestAnimationFrame(left);
+        }
+
+    }
+
 
 });
