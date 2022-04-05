@@ -18,6 +18,8 @@ $(function () {
     var move_up = false;
     var move_down = false;
 
+    animationId = requestAnimationFrame(repeat);
+
     $(document).on('keydown', function (e) {
         if (game_over == false){
             var key = e.keyCode;
@@ -78,5 +80,25 @@ $(function () {
         }
     }
 
+    function repeat() {
+        if (game_over == false){
+            carDown(car1);
+            carDown(car2);
+            carDown(car3);
+            carDown(car4);
+            carDown(car5);
 
+            lineDown(line1);
+            lineDown(line2);
+            lineDown(line3);
+
+            animationId = requestAnimationFrame(repeat);
+        }
+    }
+
+    function carDown(car){
+
+    }
+    function lineDown(line) {
+    }
 });
