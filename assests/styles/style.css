@@ -5,6 +5,7 @@
     left: 40%;
     margin-top: 40px;
     background-color: #2a7147;
+    overflow: hidden;
 }
 body {
     height: 100%;

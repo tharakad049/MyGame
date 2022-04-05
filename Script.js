@@ -14,6 +14,7 @@ $(function () {
     var move_up = false;
     var move_down = false;
 
+    var animationId;
     animationId = requestAnimationFrame(repeat);
 
     var containerWidth = parseInt(container.width());
@@ -28,16 +29,15 @@ $(function () {
             var key = e.keyCode;
             if(key == 37 && move_left === false){
                 move_left = requestAnimationFrame(left);
-            }else if (key == 39 && move_right === false){
-                move_right = requestAnimationFrame(right);
             }else if (key == 38 && move_up == false){
                 move_up = requestAnimationFrame(up);
+            }else if (key == 39 && move_right === false){
+                move_right = requestAnimationFrame(right);
             }else if (key == 40 && move_down == false){
                 move_down = requestAnimationFrame(down);
             }
         }
     });
-
 
     $(document).on('keyup', function (e) {
         if (game_over == false){
@@ -45,40 +45,40 @@ $(function () {
             if (key == 37){
                 cancelAnimationFrame(move_left);
                 move_left = false;
-            }else if (key == 39){
-                cancelAnimationFrame(move_right);
-                move_right = false;
             }else if (key == 38){
                 cancelAnimationFrame(move_up);
                 move_up = false;
+            }else if (key == 39){
+                cancelAnimationFrame(move_right);
+                move_right = false;
             }else if (key == 40){
                 cancelAnimationFrame(move_down);
                 move_down = false;
             }
         }
-
     });
+
     function left() {
-        if (game_over == false){
-            car.css('left',parseInt(car.css('left')) -5);
+        if (game_over == false && parseInt(car.css('left')) > 10){
+            car.css('left',parseInt(car.css('left')) -4);
             move_left = requestAnimationFrame(left);
         }
     }
     function right() {
-        if (game_over == false){
-            car.css('left', parseInt(car.css('left'))+5);
+        if (game_over == false && parseInt(car.css('left')) < containerWidth - (carWidth+10)){
+            car.css('left', parseInt(car.css('left')) +4);
             move_right = requestAnimationFrame(right);
         }
     }
     function up() {
-        if (game_over == false){
-            car.css('top',parseInt(car.css('top')) -3);
+        if (game_over == false && parseInt(car.css('top')) > 10){
+            car.css('top',parseInt(car.css('top')) -2);
             move_up = requestAnimationFrame(up)
         }
     }
     function down() {
-        if (game_over == false){
-            car.css('top', parseInt(car.css('top'))+3);
+        if (game_over == false && parseInt(car.css('top')) < containerHeight - (carHeight+10)){
+            car.css('top', parseInt(car.css('top')) +2);
             move_down = requestAnimationFrame(down)
         }
     }
@@ -99,7 +99,7 @@ $(function () {
         var carTop = parseInt(car.css('top'));
         if (carTop > containerHeight){
             carTop = -200;
-            var carLeft = parseInt(Math.random() * (containerWidth - carWidth));
+            var carLeft = parseInt(Math.random()*(containerWidth - carWidth));
             car.css('left', carLeft);
         }
         car.css('top', carTop + carSpeed);
