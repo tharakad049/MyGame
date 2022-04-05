@@ -13,21 +13,6 @@ body {
     background-color: darkgrey;
     font-family: sans-serif;
 }
-.line {
-    position: absolute;
-    height: 98px;
-    width: 3%;
-    margin-left: 50%;
-    background-color: white;
-}
-#line1 {
-    top: 74%;
-    height: 160px;
-    width: 3%;
-    margin-left: 50%;
-    position: absolute;
-    background-color: white;
-}
 .car {
     position: absolute;
     height: 60px;

@@ -8,10 +8,6 @@ $(function () {
     var car4 = $('#car4');
     var car5 = $('#car5');
 
-    var line1 = $('#line1');
-    var line2 = $('#line2');
-    var line3 = $('#line3');
-
     var game_over = false;
     var move_left = false;
     var move_right = false;
@@ -26,7 +22,6 @@ $(function () {
     var carHeight = parseInt(car.height());
 
     var carSpeed = 2;
-    var lineSpeed = 5;
 
     $(document).on('keydown', function (e) {
         if (game_over == false){
@@ -96,10 +91,6 @@ $(function () {
             carDown(car4);
             carDown(car5);
 
-            lineDown(line1);
-            lineDown(line2);
-            lineDown(line3);
-
             animationId = requestAnimationFrame(repeat);
         }
     }
@@ -112,13 +103,5 @@ $(function () {
             car.css('left', carLeft);
         }
         car.css('top', carTop + carSpeed);
-    }
-
-    function lineDown(line) {
-        var lineTop = parseInt(line.css('top'));
-        if (lineTop > containerHeight){
-            lineTop = 100;
-        }
-        line.css('top', lineTop + lineSpeed);
     }
 });
