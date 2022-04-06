@@ -90,8 +90,7 @@ $(function () {
         if (carTop > containerHeight){
             carTop = -200;
             var carLeft = parseInt(Math.random()*(containerWidth - carWidth));
-            var carRight = parseInt(Math.random()*(containerWidth - carWidth));
-            car.css('left', carLeft, carRight);
+            car.css('left', carLeft);
         }
         car.css('top', carTop + carSpeed);
     }
@@ -103,6 +102,11 @@ $(function () {
             if (countScore % 50 == 0){
                 score.text(parseInt(score.text()) + 1);
             }
+            if (countScore % 1000 == 0){
+                carSpeed++;
+                countScore++;
+            }
+
             carDown(car1);
             carDown(car2);
             carDown(car3);
