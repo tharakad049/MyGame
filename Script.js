@@ -97,7 +97,9 @@ $(function () {
 
     function repeat() {
         if (game_over == false){
-
+            if (car){
+               // stopGame();
+            }
             countScore++;
             if (countScore % 50 == 0){
                 score.text(parseInt(score.text()) + 1);
@@ -115,5 +117,13 @@ $(function () {
 
             animationId = requestAnimationFrame(repeat);
         }
+    }
+    function stopGame() {
+        game_over = true;
+        cancelAnimationFrame(animationId);
+        cancelAnimationFrame(move_left);
+        cancelAnimationFrame(move_right);
+        cancelAnimationFrame(move_up);
+        cancelAnimationFrame(move_down);
     }
 });
