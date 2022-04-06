@@ -7,6 +7,7 @@ $(function () {
     var car3 = $('#car3');
     var car4 = $('#car4');
     var car5 = $('#car5');
+    var score = $('#score');
 
     var game_over = false;
     var move_left = false;
@@ -23,6 +24,7 @@ $(function () {
     var carHeight = parseInt(car.height());
 
     var carSpeed = 2;
+    var countScore = 1;
 
     $(document).on('keydown', function (e) {
         if (game_over == false){
@@ -85,6 +87,12 @@ $(function () {
 
     function repeat() {
         if (game_over == false){
+
+            countScore++;
+
+            if (countScore % 20 == 0){
+                score.text(parseInt(score.text()) + 1);
+            }
             carDown(car1);
             carDown(car2);
             carDown(car3);
@@ -100,7 +108,8 @@ $(function () {
         if (carTop > containerHeight){
             carTop = -200;
             var carLeft = parseInt(Math.random()*(containerWidth - carWidth));
-            car.css('left', carLeft);
+            var carRight = parseInt(Math.random()*(containerWidth - carWidth));
+            car.css('left', carLeft, carRight);
         }
         car.css('top', carTop + carSpeed);
     }

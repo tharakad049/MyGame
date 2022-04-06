@@ -91,16 +91,16 @@ body {
 }
 #car1 {
     top: 100px;
-    left: 77%;
+    left: 64%;
     background-color: #d17e27;
 }
 #car2 {
-    top: 176px;
+    top: 400px;
     left: 56%;
     background-color: #7f6ed6;
 }
 #car3 {
-    top: 100px;
+    top: 30px;
     left: 10%;
     background-color: #e377c0;
 }
@@ -110,7 +110,7 @@ body {
     background-color: #386d86;
 }
 #car5 {
-    top: 236px;
+    top: 260px;
     left: 10%;
     background-color: #27cad1;
 }
