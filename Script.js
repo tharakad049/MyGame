@@ -85,12 +85,22 @@ $(function () {
         }
     }
 
+    function carDown(car){
+        var carTop = parseInt(car.css('top'));
+        if (carTop > containerHeight){
+            carTop = -200;
+            var carLeft = parseInt(Math.random()*(containerWidth - carWidth));
+            var carRight = parseInt(Math.random()*(containerWidth - carWidth));
+            car.css('left', carLeft, carRight);
+        }
+        car.css('top', carTop + carSpeed);
+    }
+
     function repeat() {
         if (game_over == false){
 
             countScore++;
-
-            if (countScore % 20 == 0){
+            if (countScore % 50 == 0){
                 score.text(parseInt(score.text()) + 1);
             }
             carDown(car1);
@@ -101,16 +111,5 @@ $(function () {
 
             animationId = requestAnimationFrame(repeat);
         }
-    }
-
-    function carDown(car){
-        var carTop = parseInt(car.css('top'));
-        if (carTop > containerHeight){
-            carTop = -200;
-            var carLeft = parseInt(Math.random()*(containerWidth - carWidth));
-            var carRight = parseInt(Math.random()*(containerWidth - carWidth));
-            car.css('left', carLeft, carRight);
-        }
-        car.css('top', carTop + carSpeed);
     }
 });
