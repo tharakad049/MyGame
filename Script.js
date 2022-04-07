@@ -29,6 +29,23 @@ $(function () {
     var gameOverDiv = $('#gameOverDiv');
     var gameOverBtn = $('#gameOver');
 
+    var cars = document.getElementById('car1, car2, car3, car4, car5');
+    document.onkeypress = function(e){
+        var key = e.keyCode;
+        if(key === 32){
+            cars.paused ? cars.run() : cars.pause();
+        }
+    };
+
+    var cars = document.getElementById("car1, car2, car3, car4, car5");
+    document.onclick = function(){
+        if(cars.pause){
+            cars.pause();
+        }else if(cars.run){
+            cars.run();
+        }
+    };
+
     $(document).on('keydown', function (e) {
         if (game_over == false){
             var key = e.keyCode;
