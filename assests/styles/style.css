@@ -2,11 +2,31 @@
     z-index: 1;
     position: relative;
     height: 90vh;
-    width: 22vw;
+    width: 23vw;
     left: 40%;
     margin-top: 40px;
-    background-color: #c29a9a57;
+    background-color: rgba(186, 115, 115, 0.47);
     overflow: hidden;
+    background-repeat: inherit;
+}
+#highway {
+    height: 720px;
+    width: 127vw;
+    display: block;
+    background-image: url(../images/Road.jpg);
+    position: absolute;
+    bottom: 0px;
+    left: -2px;
+    right: -60px;
+    /* background-repeat: repeat-y; */
+    animation: highway 1s linear infinite;
+    background-position: inherit;
+}
+
+@keyframes highway {
+    100% {
+        transform: translateY(100px);
+    }
 }
 body {
     height: 100%;
@@ -125,7 +145,7 @@ body {
     z-index: 1;
     position: absolute;
     margin-top: -31%;
-    margin-left: 62%;
+    margin-left: 63%;
     font-size: 35px;
     background-color: #000000;
     color: #ef0101;
