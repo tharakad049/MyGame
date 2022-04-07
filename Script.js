@@ -100,7 +100,7 @@ $(function () {
 
     function repeat() {
         if (game_over == false){
-            if (face(car, car1) || face(car, car2) || face(car, car3) || face(car, car4) || face(car, car5)) {
+            if (face(car, car1) | face(car, car2) | face(car, car3) | face(car, car4) | face(car, car5) ) {
                 stopGame();
             }
             countScore++;
@@ -117,7 +117,6 @@ $(function () {
             carDown(car3);
             carDown(car4);
             carDown(car5);
-
             animationId = requestAnimationFrame(repeat);
         }
     }
