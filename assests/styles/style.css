@@ -127,17 +127,17 @@ body {
 #restart {
     border: none;
     padding: 25px;
-    color: white;
-    background-color: #8a64ff;
+    color: red;
+    background-color: #000000;
     font-size: 30px;
     margin-top: 30%;
+    box-shadow: 0px 0px 2px 9px #d94b4b;
 }
-#restart_div {
+#restartDiv {
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: #eac7c7;
-    color: white;
+    background-color: #1f154a;
     font-family: sans-serif;
     font-size: 40px;
     text-align: center;

@@ -23,8 +23,10 @@ $(function () {
     var carWidth = parseInt(car.width());
     var carHeight = parseInt(car.height());
 
-    var carSpeed = 2;
+    var carSpeed = 1;
     var countScore = 1;
+
+    var restartDiv = $('#restartDiv');
 
     $(document).on('keydown', function (e) {
         if (game_over == false){
@@ -74,13 +76,13 @@ $(function () {
     }
     function up() {
         if (game_over == false && parseInt(car.css('top')) > 10){
-            car.css('top',parseInt(car.css('top')) -2);
+            car.css('top',parseInt(car.css('top')) -4);
             move_up = requestAnimationFrame(up)
         }
     }
     function down() {
         if (game_over == false && parseInt(car.css('top')) < containerHeight - (carHeight+10)){
-            car.css('top', parseInt(car.css('top')) +2);
+            car.css('top', parseInt(car.css('top')) +4);
             move_down = requestAnimationFrame(down)
         }
     }
@@ -89,7 +91,7 @@ $(function () {
         var carTop = parseInt(car.css('top'));
         if (carTop > containerHeight){
             carTop = -200;
-            var carLeft = parseInt(Math.random()*(containerWidth - carWidth));
+            var carLeft = parseInt(Math.round(Math.random()*(containerWidth - carWidth)));
             car.css('left', carLeft);
         }
         car.css('top', carTop + carSpeed);
@@ -125,6 +127,7 @@ $(function () {
         cancelAnimationFrame(move_right);
         cancelAnimationFrame(move_up);
         cancelAnimationFrame(move_down);
+        restartDiv.slideDown();
     }
     function face(rectone, recttwo){
 
