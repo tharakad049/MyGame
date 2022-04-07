@@ -26,7 +26,8 @@ $(function () {
     var carSpeed = 1;
     var countScore = 1;
 
-    var restartDiv = $('#restartDiv');
+    var gameOverDiv = $('#gameOverDiv');
+    var gameOverBtn = $('#gameOver');
 
     $(document).on('keydown', function (e) {
         if (game_over == false){
@@ -127,8 +128,13 @@ $(function () {
         cancelAnimationFrame(move_right);
         cancelAnimationFrame(move_up);
         cancelAnimationFrame(move_down);
-        restartDiv.slideDown();
+        gameOverDiv.slideDown();
+        gameOverBtn.focus();
     }
+    gameOverBtn.click(function () {
+        location.reload();
+    });
+
     function face(rectone, recttwo){
 
         var r1 = $(rectone);
