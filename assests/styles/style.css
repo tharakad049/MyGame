@@ -1,16 +1,16 @@
 #container {
     z-index: 1;
     position: relative;
-    height: 90vh;
+    height: 98vh;
     width: 23vw;
     left: 40%;
-    margin-top: 40px;
+    margin-top: 5px;
     background-color: rgba(186, 115, 115, 0.47);
     overflow: hidden;
     background-repeat: inherit;
 }
 #highway {
-    height: 720px;
+    height: 770px;
     width: 127vw;
     display: block;
     background-image: url(../images/Road.jpg);
@@ -45,12 +45,12 @@ body {
     position: absolute;
     height: 70px;
     width: 50px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px 0px #0122f2;
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px 5px #00000066;
 }
 #car {
     bottom: 2%;
-    left: 45%;
+    left: 56%;
     background-color: #39e150;
 }
 .f_glass {
@@ -60,23 +60,23 @@ body {
     margin-left: 41%;
     top: 15%;
     border-radius: 5px 5px 5px 5px;
-    background-color: #ffffff;
+    background-color: #ff0000;
 }
 .f_light_l {
     position: absolute;
-    height: 10%;
+    height: 12%;
     width: 25%;
     margin-left: 12%;
-    top: -8%;
+    top: -11%;
     border-radius: 5px 5px 0px 0px;
     background-color: #eef700;
 }
 .f_light_r {
     position: absolute;
-    height: 10%;
+    height: 12%;
     width: 26%;
     margin-left: 62%;
-    top: -8%;
+    top: -12%;
     border-radius: 5px 5px 0px 0px;
     background-color: #eef700;
 }
@@ -117,28 +117,28 @@ body {
     border-radius: 0px 5px 5px 0px;
 }
 #car1 {
-    top: 100px;
+    top: -130px;
     left: 64%;
     background-color: #d17e27;
 }
 #car2 {
     top: 386px;
-    left: 80%;
+    left: 78%;
     background-color: #7f6ed6;
 }
 #car3 {
-    top: 30px;
+    top: -300px;
     left: 10%;
     background-color: #e377c0;
 }
 #car4 {
-    top: 236px;
-    left: 79%;
+    top: 120px;
+    left: 77%;
     background-color: #386d86;
 }
 #car5 {
     top: 260px;
-    left: 10%;
+    left: 29%;
     background-color: #27cad1;
 }
 #score_div {

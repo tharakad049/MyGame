@@ -29,11 +29,11 @@ $(function () {
     var gameOverDiv = $('#gameOverDiv');
     var gameOverBtn = $('#gameOver');
 
-    var cars = document.getElementById('car1');
+    var cars = document.getElementById('car1, car2, car3, car4, car5');
     document.onclick = function(e){
         var key = e.keyCode;
         if(key === 32){
-            cars.paused ? cars.running() : cars.paused();
+            cars.pause() ? cars.run() : cars.pause();
         }
     };
 
@@ -100,7 +100,7 @@ $(function () {
         var carTop = parseInt(car.css('top'));
         if (carTop > containerHeight){
             carTop = -200;
-            var carLeft = parseInt(Math.round(Math.random()*(containerWidth - carWidth)));
+            var carLeft = parseInt(Math.round(Math.random()*(containerWidth - (carWidth+10))));
             car.css('left', carLeft);
         }
         car.css('top', carTop + carSpeed);
