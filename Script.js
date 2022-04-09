@@ -99,7 +99,7 @@ $(function () {
     function carDown(car){
         var carTop = parseInt(car.css('top'));
         if (carTop > containerHeight){
-            carTop = -200;
+            carTop = -160;
             var carLeft = parseInt(Math.round(Math.random()*(containerWidth - (carWidth+10))));
             car.css('left', carLeft);
         }
